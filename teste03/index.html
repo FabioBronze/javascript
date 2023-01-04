@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(42, 94, 143);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .box {
+        display: inline-block;
+      }
+
+      .box div {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box2">Intereja</div>
+    </div>
+
+    <script>
+      var a = window.document.getElementsByClassName("box2")[0];
+
+      a.addEventListener("click", clicar);
+      a.addEventListener("mouseenter", entrar);
+      a.addEventListener("mouseout", sair);
+
+      function clicar() {
+        a.innerText = "Clicou!";
+        a.style.background = "red";
+      }
+
+      function entrar() {
+        a.innerText = "Entrou!";
+        a.style.background = "blue";
+      }
+
+      function sair() {
+        a.innerText = "Saiu!";
+        a.style.background = "aquamarine";
+      }
+    </script>
+  </body>
+</html>
