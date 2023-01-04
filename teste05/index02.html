@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condições</title>
+  </head>
+  <body>
+    <h1>Lista de Países</h1>
+    <p>Em que país você mora? <input type="text" name="esc" id="esc" /></p>
+    <input type="button" value="Verificar" onclick="verificar()" />
+
+    <div id="res"></div>
+
+    <script>
+      function verificar() {
+        let pais = document.getElementById("esc");
+        let res = document.getElementById("res");
+        let fim = pais.value;
+
+        res.innerHTML = `<p>O Seu país de origem é <strong>${fim}</strong></p>`;
+
+        if (fim == "Portugal" || fim == "portugal") {
+          res.innerHTML += `<p>ES TUGA</p>`;
+        } else {
+          res.innerHTML += `<p>ES ESTRANGEIRO</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

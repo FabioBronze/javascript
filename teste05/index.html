@@ -7,6 +7,34 @@
     <title>Condições</title>
   </head>
   <body>
-    
+    <h1>Sistema de Multas</h1>
+
+    <p>Velocidade do carro: <input type="number" id="ivel" /> Km/h</p>
+    <input type="submit" value="Verificar" onclick="calcular()" />
+
+    <div>
+      <p>VELOCIDADE CALCULADA EM BAIXO:</p>
+      <p id="res"></p>
+      <p id="mul"></p>
+    </div>
+
+    <script>
+      function calcular() {
+        let txtv = document.getElementById("ivel");
+        let res = document.getElementById("res");
+        let vel = Number(txtv.value);
+        let mul = document.getElementById("mul");
+
+        res.innerHTML = `<p>Sua velocidade atual é de ${vel} <strong>Km/h</p></strong>`;
+
+        if (vel > 120) {
+          mul.innerHTML = `<strong>VOCÊ FOI MULTADO</strong>`;
+        } else {
+          mul.innerHTML = `<strong>VOCÊ ESTÁ NO PADRAO</strong>`;
+        }
+
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`;
+      }
+    </script>
   </body>
 </html>
