@@ -38,6 +38,13 @@ p {
 
 }
 
+select {
+    overflow: hidden;
+    padding: 5px;
+}
+
+
+
 footer {
     text-align: center;
     color: white;
