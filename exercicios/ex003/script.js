@@ -18,12 +18,12 @@ function contar() {
         }
         if(1 < f){
             //Crescenete
-            for (let c = 1; c <= f; c += p){
+            for (let c = i; c <= f; c += p){
             res.innerHTML += ` ${c} `
         }
         } else{
             //Decrescente
-            for (let c = 1; c >= f; c -= p){
+            for (let c = i; c >= f; c -= p){
                 res.innerHTML += `${c}`
             }
         }
