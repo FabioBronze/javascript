@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-color: rgb(77, 77, 255);
+    background-color: rgb(110, 110, 255);
     font: normal 15pt Arial;
 }
 
@@ -22,7 +22,6 @@ section {
 
 #flista {
     width: 150px;
-    overflow: hidden;
 }
 
 footer {
